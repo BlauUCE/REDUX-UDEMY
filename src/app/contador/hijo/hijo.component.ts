@@ -29,4 +29,8 @@ export class HijoComponent implements OnInit {
     this.contadorh = 0;
     this.cambioContador.emit(this.contadorh);
   }
+
+  func() {
+    console.log("prueba");
+  }
 }
