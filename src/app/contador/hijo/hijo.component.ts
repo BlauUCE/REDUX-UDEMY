@@ -30,7 +30,4 @@ export class HijoComponent implements OnInit {
     this.cambioContador.emit(this.contadorh);
   }
 
-  func() {
-    console.log("prueba");
-  }
 }
