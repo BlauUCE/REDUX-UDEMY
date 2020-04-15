@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PruebaR';
+  
+  contadorp: number;
+
+  constructor() {
+    this.contadorp = 10;
+  }
+
+  incrementar() {
+    this.contadorp++;
+  }
+
+  decrementar() {
+    this.contadorp--;
+  }
+
 }
