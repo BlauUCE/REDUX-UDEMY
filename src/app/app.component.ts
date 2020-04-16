@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Store, Action } from '@ngrx/store';
 import { IncrementarAction, DecrementarAction } from './contador/contador.actions';
+import { AppState } from './app.reducers';
 
 
-interface AppState {
+/* interface AppState {
   contador: number;
-}
+} */
 
 @Component({
   selector: 'app-root',
@@ -20,9 +21,22 @@ export class AppComponent {
 
   constructor(private store: Store<AppState>) {
     //this.contadorp = 10;
-    this.store.subscribe( state => {
+
+    /* this.store.subscribe( state => {
       //console.log(state);
       this.contadorp = state.contador;
+      console.log(state);
+    }); */
+
+    /* this.store.select('contador').subscribe( state => {
+      //console.log(state);
+      //this.contadorp = state.contador;
+      console.log(state);
+    }); */
+
+    this.store.select('contador').subscribe( cont => {
+      //console.log(state);
+      this.contadorp = cont;
     });
   }
 
