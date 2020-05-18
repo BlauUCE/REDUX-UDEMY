@@ -12,7 +12,7 @@ import { ResetAction } from '../contador.actions';
 export class NietoComponent implements OnInit {
 
   //@Input() contadorn:number;
-  //@Output() cambio = new EventEmitter<number>();
+  //@Output() cambio =  new EventEmitter<number>();
 
   public contadorn: number;
 
